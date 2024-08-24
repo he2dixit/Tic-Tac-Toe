@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 char board[3][3]; 
 
 void initialize_board() 
@@ -25,9 +24,8 @@ void display_board()
 
 int is_valid_move(int row, int col) 
 {
-    row--; // Adjusting to 0-based index
-    col--; // Adjusting to 0-based index
-    
+    row--; 
+    col--; 
     if (row < 0 || row >= 3 || col < 0 || col >= 3) 
     {
         return 0; 
@@ -70,11 +68,8 @@ int main()
 {
     int row, col;
     char player = 'X'; 
-
     initialize_board();
-
     printf("Welcome to Tic Tac Toe!\n");
-
     do 
     {
         display_board();
@@ -99,6 +94,5 @@ int main()
         }
     } 
     while (1);
-    
     return 0;
 }
